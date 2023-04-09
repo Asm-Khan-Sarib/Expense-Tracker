@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleForReport.css">
 </head>
 <body>
     <header>
@@ -18,12 +18,19 @@
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h2>Track Your Expenses</h2>
-        <p>this is report page</p>
-    </section>
+    <div>
+        <table class="output_table">
+            <tr>
+                <td><button type="button" id="pie_chart" class="view_button">Show Chart 1</button></td>
+                <td><button type="button" id="bar_chart" class="view_button">Show Chart 2</button></td>
+                <td><button type="button" id="remove_chart" class="view_button">Remove Chart</button></td>
+            </tr>
+        </table>
+        <p id="text1">testing</p>
+    </div>
     <footer>
         <p>&copy; 2023 Expense Tracker. All rights reserved.</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
