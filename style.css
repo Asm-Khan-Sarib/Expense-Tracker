@@ -55,23 +55,22 @@ nav a {
 .hero p {
     margin-top: 1rem;
     font-size: 1.2rem;
-    color: #666;
+    color: rgb(77, 77, 77);
 }
 
 .cta {
     display: inline-block;
     margin-top: 1rem;
     padding: 1rem 2rem;
-    background-color: rgba(167, 80, 189, 0.7);
+    background-color: rgb(100, 16, 16);
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
 }
 
 .cta:hover {
-    background-color: rgba(196, 103, 219, 0.9);
+    background-color: rgb(138, 16, 16);
 }
 
 footer {
