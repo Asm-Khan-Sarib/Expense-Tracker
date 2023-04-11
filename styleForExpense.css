@@ -70,3 +70,7 @@ td{
 #submit:hover {
     background-color: rgb(138, 16, 16);
 }
+#text3{
+    text-align: center;
+    color: rgb(220, 0, 0);
+}

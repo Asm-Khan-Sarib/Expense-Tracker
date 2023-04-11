@@ -22,10 +22,10 @@
         <form class="give_data">
             <table class="input_table">
                 <tr>
-                    <td><label for="s1">Amount: </label></td> <td><input type="number" id="amount1"></td>
+                    <td><label for="amount1">Amount: </label></td> <td><input type="number" id="amount1" required></td>
                 </tr>
                 <tr>
-                    <td><label for="date1">Date: </label></td><td><input type="number" id="date1"></td>
+                    <td><label for="date1">Date: </label></td><td><input type="text" id="date1" required></td>
                 </tr>
                 <tr>
                     <td><label for="description1">Description: </label></td><td><input type="text" id="description1"></td>
@@ -49,9 +49,11 @@
             </table>
             
         </form><br>
+        <p id="text3"></p>
     </div>
     <footer>
         <p>&copy; 2023 Expense Tracker. All rights reserved.</p>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>
