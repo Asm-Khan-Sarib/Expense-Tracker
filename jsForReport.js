@@ -1,5 +1,5 @@
 const text1 = document.getElementById('text1')
-const button1 = document.getElementById('pie_chart')
+const button1 = document.getElementById('doughnut_chart')
 const button2 = document.getElementById('bar_chart')
 const button3 = document.getElementById('remove_chart')
 const chartCanvas = document.getElementById('chart').getContext('2d');
@@ -68,8 +68,8 @@ function draw_chart(chartType){
 
 document.addEventListener('DOMContentLoaded', function (){
     button1.addEventListener('click', function () {
-        text1.innerHTML = "Pie chart"
-        draw_chart('pie')
+        text1.innerHTML = "Doughnut chart"
+        draw_chart('doughnut')
     })
     button2.addEventListener('click', function () {
         text1.innerHTML = "Bar chart"
