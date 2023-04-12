@@ -24,8 +24,10 @@ function save_all_transaction() {
     }
     local_data = JSON.parse(localStorage.getItem('user_info'));
     if (local_data != null) {
-
         localStorage.removeItem('user_info');
+    }
+    else{
+        local_data=[]
     }
     local_data.push(data)
     localStorage.setItem('user_info', JSON.stringify(local_data))
