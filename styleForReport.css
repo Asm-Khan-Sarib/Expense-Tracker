@@ -75,3 +75,9 @@ td{
     margin: auto;
     font-size: 1.2rem;
 }
+#chartContainer {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+}

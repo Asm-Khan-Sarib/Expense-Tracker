@@ -7,6 +7,9 @@ const button3 = document.getElementById('remove_chart')
 const button4 = document.getElementById('all_info')
 const button5 = document.getElementById('submit')
 const form = document.querySelector('.give_data')
+const chartCanvas = document.getElementById('chart').getContext('2d');
+const size = document.getElementById('chartContainer')
+let chart;
 
 
 //get and save data
@@ -22,7 +25,7 @@ function save_all_transaction() {
         category: category,
         description: description,
     }
-    local_data = JSON.parse(localStorage.getItem('user_info'));
+    local_data = JSON.parse(localStorage.getItem('user_info'))
     if (local_data != null) {
         localStorage.removeItem('user_info');
     }
@@ -35,7 +38,7 @@ function save_all_transaction() {
 }
 // page: transaction button: show_all_transaction
 function show_all_transaction() {
-    let local_data = JSON.parse(localStorage.getItem('user_info'));
+    let local_data = JSON.parse(localStorage.getItem('user_info'))
     if (local_data != null) {
         let text = ''
         let total = 0
@@ -53,21 +56,82 @@ function show_all_transaction() {
         text2.innerHTML = 'null'
     }
 }
+//remove chart
+function remove(){
+    if (chart) {
+      chart.destroy();
+      size.style.width='0px'
+      size.style.height='0px'
+    }
+}
+// Function to draw chart
+function drawChart(chartType,food_amount,bill_amount,shopping_amount,others_amount) {
+    // If chart already exists, destroy it
+    remove()
+    //set chart size
+    size.style.width='50%'
+    size.style.height='50%'
+    // Create new chart
+    chart = new Chart(chartCanvas, {
+      type: chartType,
+      data: {
+        labels: ['Food', 'Bill', 'Shoping', 'Others'],
+        datasets: [{
+          data: [food_amount,bill_amount,shopping_amount,others_amount],
+          backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#ff0044']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+  }
 
+// get data for chart
+function draw_chart(chartType){
+    let local_data = JSON.parse(localStorage.getItem('user_info'))
+    let food_amount = 0
+    let bill_amount= 0
+    let shopping_amount= 0
+    let others_amount= 0
+    
+
+    for (let i = 0; i < local_data.length; i++){
+        if(local_data[i].category === 'food'){
+            food_amount += parseInt(local_data[i].amount)
+        }
+        if(local_data[i].category === 'bill'){
+            bill_amount += parseInt(local_data[i].amount)
+        }
+        if(local_data[i].category === 'shopping'){
+            shopping_amount += parseInt(local_data[i].amount)
+        }
+        if(local_data[i].category === 'others'){
+            others_amount += parseInt(local_data[i].amount)
+        }
+    }
+    drawChart(chartType,food_amount,bill_amount,shopping_amount,others_amount)
+    let text = `food: ${food_amount}`
+    text1.innerHTML = text
+}
 document.addEventListener('DOMContentLoaded', function () {
     if (button1 != null) {
         button1.addEventListener('click', function () {
             text1.innerHTML = "Pie chart"
+            draw_chart('pie')
         })
     }
     if (button2 != null) {
         button2.addEventListener('click', function () {
             text1.innerHTML = "Bar chart"
+            draw_chart('bar')
         })
     }
     if (button3 != null) {
         button3.addEventListener('click', function () {
             text1.innerHTML = "Remove chart"
+            remove()
         })
     }
     if (button4 != null) {
