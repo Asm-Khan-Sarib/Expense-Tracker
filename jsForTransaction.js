@@ -4,7 +4,7 @@ const button4 = document.getElementById('all_info')
 function show_all_transaction() {
     let local_data = JSON.parse(localStorage.getItem('user_info'))
     if (local_data != null) {
-        let text = '<tr><td><b>Amount</b></td><td><b>Date</b></td><td><b>category</b></td><td><b>Description</b></td></tr>'
+        let text = '<tr><td><b>Amount</b></td><td><b>Date</b></td><td><b>Category</b></td><td><b>Description</b></td></tr>'
         for (let i = 0; i < local_data.length; i++) {
             text +=`<tr>`
             text += `<td>${local_data[i].amount}</td>`
