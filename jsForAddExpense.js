@@ -9,6 +9,12 @@ function save_all_transaction() {
     let category = document.querySelector('input[name="category"]:checked').value || 0
     let description = document.querySelector('#description1').value || 0
     let local_data = []
+    if(description.length>20){
+        description = description.slice(0, 20) + '...'
+    }
+    if(date.length>10){
+        date = date.slice(0, 10) + '...'
+    }
     let data = {
         amount: amount,
         date: date,
