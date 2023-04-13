@@ -15,7 +15,7 @@ function show_all_transaction() {
             text += '<br>'
             total += parseInt(local_data[i].amount)
         }
-        text2.innerHTML = text
+        text2.innerHTML = `${text}<br><br>`
     }
     else {
         text2.innerHTML = 'null'
