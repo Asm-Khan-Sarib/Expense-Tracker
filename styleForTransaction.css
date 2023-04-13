@@ -64,6 +64,16 @@ footer {
 .view_button:hover {
     background-color: rgb(138, 16, 16);
 }
+.sort_button {
+    background-color: rgb(100, 16, 16);
+    color:#fff;
+    height: 5vh;
+    width: 4vw;
+    font-size: 0.7rem;
+}
+.sort_button:hover {
+    background-color: rgb(138, 16, 16);
+}
 #text2 {
     text-align: center;
     margin: auto;
