@@ -40,18 +40,13 @@ function drawChart(chartType, food_amount, bill_amount, shopping_amount, others_
 }
 
 // get data for chart
-function draw_chart(chartType) {
+function chart_data(chartType) {
   let local_data = JSON.parse(localStorage.getItem('user_info'))
-  if (local_data == null) {
-    text1 = 'Please add some expences to visualise them'
-  }
-  else {
+  if (local_data != null) {
     let food_amount = 0
     let bill_amount = 0
     let shopping_amount = 0
     let others_amount = 0
-
-
     for (let i = 0; i < local_data.length; i++) {
       if (local_data[i].category === 'food') {
         food_amount += parseInt(local_data[i].amount)
@@ -70,20 +65,20 @@ function draw_chart(chartType) {
     let text = `Food:${food_amount} Bill:${bill_amount} Shoping:${shopping_amount} Othres:${others_amount}`
     text1.innerHTML = text
   }
+  else {
+    text1.innerHTML = 'Please add some expences to visualise them'
+  }
 
 }
-
 document.addEventListener('DOMContentLoaded', function () {
   button1.addEventListener('click', function () {
-    text1.innerHTML = "Doughnut chart"
-    draw_chart('doughnut')
+    chart_data('doughnut')
   })
   button2.addEventListener('click', function () {
-    text1.innerHTML = "Bar chart"
-    draw_chart('bar')
+    chart_data('bar')
   })
   button3.addEventListener('click', function () {
-    text1.innerHTML = "Remove chart"
+    text1.innerHTML = "Chart Removed"
     remove()
   })
 })
