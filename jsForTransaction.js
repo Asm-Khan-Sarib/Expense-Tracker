@@ -54,7 +54,6 @@ function sort_by_category() {
         text2.innerHTML = 'null'
     }
 }
-
 document.addEventListener('DOMContentLoaded', function () {
     button4.addEventListener('click', function () {
         text2.innerHTML = 'working'
