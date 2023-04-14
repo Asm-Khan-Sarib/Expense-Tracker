@@ -1,5 +1,4 @@
 const text2 = document.getElementById('text2')
-const button4 = document.getElementById('all_info')
 const sort_time = document.getElementById('sort_time')
 const sort_category = document.getElementById('sort_category')
 // make table from array
@@ -57,13 +56,8 @@ function sort_by_category() {
 document.addEventListener('DOMContentLoaded', function () {
     let local_data = JSON.parse(localStorage.getItem('profile'))
     if(local_data != null){
-        button4.disabled = false
         sort_time.disabled = false
         sort_category.disabled = false
-        button4.addEventListener('click', function () {
-            text2.innerHTML = 'working'
-            sort_by_time()
-        })
         sort_time.addEventListener('click', function () {
             text2.innerHTML = 'working'
             sort_by_time()
@@ -75,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     else{
         text2.innerHTML = '<br><br>Plase create a profile first'
-        button4.disabled = true
         sort_time.disabled = true
         sort_category.disabled = true
     }

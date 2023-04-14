@@ -18,11 +18,16 @@
             </ul>
         </nav>
     </header>
+    
     <div class="output">
-        <button type="button" id="sort_time" class="sort_button">Sort by Time</button>
-        <button type="button" id="all_info" class="view_button">Show All Transactions</button>
-        <button type="button" id="sort_category" class="sort_button">Sort by Category</button>
-        <p id="text2">testing</p>
+        <div class="dropdown">
+            <button class="dropbtn">Show All Transactions</button>
+            <div class="dropdown-content">
+              <a id="sort_time">Sort by Time</a>
+              <a id="sort_category">Sort by Category</a>
+            </div>
+        </div>
+        <p id="text2"><br></p>
     </div>
     <footer>
         <p>&copy; 2023 Expense Tracker. All rights reserved.</p>

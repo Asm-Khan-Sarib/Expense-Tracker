@@ -1,5 +1,4 @@
-/* Reset default margin and padding */
-body{
+body {
     background-image: linear-gradient(to bottom right, rgb(150, 50, 250), rgb(206, 182, 102), rgb(185, 90, 77), rgb(50, 150, 200));
     background-repeat: no-repeat;
     margin: 0;
@@ -9,7 +8,10 @@ body{
     font-family: Arial, sans-serif;
     color: #333;
 }
-h1, h2, p {
+
+h1,
+h2,
+p {
     margin: 0;
     padding: 0;
 }
@@ -18,7 +20,7 @@ header {
     background-color: #250d0d;
     color: #fff;
     padding: 1rem;
-    
+
 }
 
 header h1 {
@@ -39,6 +41,7 @@ nav a {
     color: #fff;
     text-decoration: none;
 }
+
 footer {
     background-color: #250d0d;
     color: rgb(218, 218, 218);
@@ -49,37 +52,21 @@ footer {
     left: 0;
     right: 0;
 }
+
 .output {
     padding: 1%;
     text-align: center;
     margin: auto;
     font-size: 1.2rem;
 }
-.view_button {
-    background-color: rgb(100, 16, 16);
-    color:#fff;
-    height: 6.5vh;
-    width: 8vw;
-}
-.view_button:hover {
-    background-color: rgb(138, 16, 16);
-}
-.sort_button {
-    background-color: rgb(100, 16, 16);
-    color:#fff;
-    height: 5vh;
-    width: 4vw;
-    font-size: 0.7rem;
-}
-.sort_button:hover {
-    background-color: rgb(138, 16, 16);
-}
+
 #text2 {
     text-align: center;
     margin: auto;
     font-size: 1.2rem;
 }
-td{
+
+td {
     min-height: 20vh;
     min-width: 20vh;
     max-height: 20vh;
@@ -87,8 +74,53 @@ td{
     border: 1px solid rgba(51, 51, 51, 0.6);
     background-color: rgba(220, 220, 220, 0.15);
 }
-table{
-    margin:0 auto;
+
+table {
+    margin: 0 auto;
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: rgb(100, 16, 16);
+    color: #fff;
+    height: 6.5vh;
+    width: 10vw;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(51, 51, 51, 0.15);
+    min-width: 10vw;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size: 0.9rem;
+    color: rgb(63, 41, 8);
+    padding: 6% 8%;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: rgb(255, 177, 60);
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgb(138, 16, 16);
 }
