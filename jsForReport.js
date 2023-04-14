@@ -71,14 +71,28 @@ function chart_data(chartType) {
 
 }
 document.addEventListener('DOMContentLoaded', function () {
-  button1.addEventListener('click', function () {
-    chart_data('doughnut')
-  })
-  button2.addEventListener('click', function () {
-    chart_data('bar')
-  })
-  button3.addEventListener('click', function () {
-    text1.innerHTML = "Chart Removed"
-    remove()
-  })
+  let local_data = JSON.parse(localStorage.getItem('profile'))
+    if(local_data != null){
+      button1.disabled = false
+      button2.disabled = false
+      button3.disabled = false
+
+      button1.addEventListener('click', function () {
+        chart_data('doughnut')
+      })
+      button2.addEventListener('click', function () {
+        chart_data('bar')
+      })
+      button3.addEventListener('click', function () {
+        text1.innerHTML = "Chart Removed"
+        remove()
+      })
+    }
+    else{
+      text1.innerHTML = '<br><br>Plase create a profile first'
+      button1.disabled = true
+      button2.disabled = true
+      button3.disabled = true
+    }
+  
 })

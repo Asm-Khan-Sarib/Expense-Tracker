@@ -55,16 +55,29 @@ function sort_by_category() {
     }
 }
 document.addEventListener('DOMContentLoaded', function () {
-    button4.addEventListener('click', function () {
-        text2.innerHTML = 'working'
-        sort_by_time()
-    })
-    sort_time.addEventListener('click', function () {
-        text2.innerHTML = 'working'
-        sort_by_time()
-    })
-    sort_category.addEventListener('click', function () {
-        text2.innerHTML = 'working'
-        sort_by_category()
-    })
+    let local_data = JSON.parse(localStorage.getItem('profile'))
+    if(local_data != null){
+        button4.disabled = false
+        sort_time.disabled = false
+        sort_category.disabled = false
+        button4.addEventListener('click', function () {
+            text2.innerHTML = 'working'
+            sort_by_time()
+        })
+        sort_time.addEventListener('click', function () {
+            text2.innerHTML = 'working'
+            sort_by_time()
+        })
+        sort_category.addEventListener('click', function () {
+            text2.innerHTML = 'working'
+            sort_by_category()
+        })
+    }
+    else{
+        text2.innerHTML = '<br><br>Plase create a profile first'
+        button4.disabled = true
+        sort_time.disabled = true
+        sort_category.disabled = true
+    }
+    
 })
