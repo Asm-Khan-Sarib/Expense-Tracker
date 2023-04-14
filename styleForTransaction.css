@@ -68,20 +68,17 @@ footer {
 
 td {
     min-height: 20vh;
-    min-width: 20vh;
     max-height: 20vh;
+    min-width: 8vw;
     max-width: 30vw;
     border: 1px solid rgba(51, 51, 51, 0.6);
     background-color: rgba(220, 220, 220, 0.15);
 }
-
 table {
     margin: 0 auto;
     border-collapse: collapse;
     border-spacing: 0;
 }
-
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -99,21 +96,21 @@ table {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(51, 51, 51, 0.15);
+    background-color: rgba(75, 75, 75, 0.85);
     min-width: 10vw;
     z-index: 1;
 }
 
 .dropdown-content a {
     font-size: 0.9rem;
-    color: rgb(63, 41, 8);
+    color: rgb(218, 136, 13);
     padding: 6% 8%;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
-    color: rgb(255, 177, 60);
+    color: rgb(255, 162, 22);
     cursor: pointer;
 }
 

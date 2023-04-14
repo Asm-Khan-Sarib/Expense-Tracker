@@ -3,16 +3,17 @@ const sort_time = document.getElementById('sort_time')
 const sort_category = document.getElementById('sort_category')
 // make table from array
 function make_table(all_data) {
-    let text = '<tr><td><b>Amount</b></td><td><b>Date</b></td><td><b>Category</b></td><td><b>Description</b></td></tr>'
+    let text = '<tr><td><b>Id</b></td><td><b>Amount</b></td><td><b>Date</b></td><td><b>Category</b></td><td><b>Description</b></td></tr>'
     for (let i = 0; i < all_data.length; i++) {
         text += `<tr>`
+        text += `<td class='td_id'>${i+1}</td>`
         text += `<td>${all_data[i].amount}</td>`
         text += `<td>${all_data[i].date}</td>`
         text += `<td>${all_data[i].category}</td>`
         text += `<td>${all_data[i].description}</td>`
         text += '</tr>'
     }
-    text2.innerHTML = `<br><table>${text}</table><br><br>`
+    text2.innerHTML = `<br><br><table>${text}</table><br><br>`
 }
 // get data from local storage and default sort by time
 function sort_by_time() {
