@@ -54,3 +54,43 @@ footer {
     left: 0;
     right: 0;
 }
+.input_table {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+}
+td{
+    height: 40px;
+}
+#submit {
+    background-color: rgb(100, 16, 16);
+    color:#fff;
+    height: 40px;
+    width: 80px;
+}
+#submit:hover {
+    background-color: rgb(138, 16, 16);
+}
+#text3{
+    text-align: center;
+    color: rgb(220, 0, 0);
+}
+.give_data{
+    margin: auto;
+    min-height: 20vh;
+    min-width: 20vw;
+    max-width: 24vw;
+}
+.all{
+    text-align: center;
+    margin: auto;
+}
+.delet_button{
+    background-color: rgb(100, 16, 16);
+    color:#fff;
+    height: 8vh;
+    width: 8vw;
+}
+.delet_button:hover {
+    background-color: rgb(138, 16, 16);
+}

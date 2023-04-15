@@ -19,10 +19,30 @@
             </ul>
         </nav>
     </header>
-    <div>
-
+    <div class="all">
+        
+        <form class="give_data">
+            <table class="input_table">
+                <tr>
+                    <td><label for="delet_id">Write Transaction Id to delet</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="delet_id" required></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" id="submit">Delet</button></td>
+                </tr>
+            </table>
+        </form><br>
+        <br><br>
+        Quick Delet<br><br>
+        <button type="button" class="delet_button" id="delet1">Delet Last Transection</button>
+        <button type="button" class="delet_button" id="delet5">Delet Last 5 Transection</button>
+        <button type="button" class="delet_button" id="delet">Delet All Transection</button>
+        <br><br><br>
+        <p id="text">Delet massage</p>
     </div>
-    This is delet page
+    
     <footer>
         <p>&copy; 2023 Expense Tracker. All rights reserved.</p>
     </footer>
