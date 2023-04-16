@@ -33,11 +33,24 @@ function quick_delet(x){
 
 document.addEventListener('DOMContentLoaded', function (){
     submit_button.addEventListener('click', function () {
-        text.innerHTML = "Transection not found <br>Please write only one transection id at a time"
+        text.innerHTML = "Please write a valid id in the box"
     })
     form.addEventListener('submit', (event) => {
         event.preventDefault()
+        local_data = JSON.parse(localStorage.getItem('user_info'))
         let delet_id = document.querySelector('#delet_id').value
+
+        if(delet_id > 0 && delet_id < local_data.length){
+            localStorage.removeItem('user_info');
+            local_data.splice(delet_id-1,1)
+            if(local_data.length>0){
+                localStorage.setItem('user_info', JSON.stringify(local_data))
+            }
+            text.innerHTML = "Transection deleted succesfully"
+        }
+        else{
+            text.innerHTML = "Transection not found <br>Please write only one transection id at a time"
+        }
     })
     delet.addEventListener('click', function () {
         quick_delet('all')
