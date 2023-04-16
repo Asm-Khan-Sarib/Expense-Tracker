@@ -1,4 +1,5 @@
 const button5 = document.getElementById('submit')
+const text = document.getElementById('text')
 const text3 = document.getElementById('text3')
 const form = document.querySelector('.give_data')
 
@@ -37,7 +38,7 @@ function save_all_transaction() {
 
     local_data.push(data)
     localStorage.setItem('user_info', JSON.stringify(local_data))
-    text3.innerHTML = `Succesfully added to your profile <br>Total number of Transaction: ${local_data.length}`
+    text3.innerHTML = `Transection added succesfully<br>Total number of Transactions: ${local_data.length}`
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (local_data != null) {
         button5.disabled = false
         button5.addEventListener('click', function () {
-            text3.innerHTML = "Please fill all the boxes to save your information"
+            text3.innerHTML = "Please fill all the boxes to save your transection"
         })
         form.addEventListener('submit', (event) => {
             event.preventDefault()
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
     else {
-        text3.innerHTML = '<br><br>Plase create a profile first'
+        text.innerHTML = 'Plase create a profile to use all the featurs<br><br>'
         button5.disabled = true
     }
 

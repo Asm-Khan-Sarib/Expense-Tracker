@@ -1,4 +1,3 @@
-/* Reset default margin and padding */
 body{
     background-image: linear-gradient(to bottom right, rgb(150, 50, 250), rgb(206, 182, 102), rgb(185, 90, 77), rgb(50, 150, 200));
     background-repeat: no-repeat;
@@ -6,16 +5,12 @@ body{
     padding: 0;
     height: 100vh;
     width: 100vw;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 h1, h2, p {
     margin: 0;
     padding: 0;
-}
-
-/* Basic styling for the page */
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
 }
 
 header {
@@ -71,9 +66,9 @@ td{
 #submit:hover {
     background-color: rgb(138, 16, 16);
 }
-#text3{
+.text{
     text-align: center;
-    color: rgb(220, 0, 0);
+    font-size: 0.9rem;
 }
 .give_data{
     margin: auto;

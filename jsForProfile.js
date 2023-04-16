@@ -15,14 +15,14 @@ function save_all_info() {
     if (local_data != null) {
         localStorage.removeItem('profile');
         local_data=[]
+        text6.innerHTML = `Profile updated succesfully`
     }
     else{
         local_data=[]
+        text6.innerHTML = `Profile created succesfully`
     }
     local_data.push(data)
     localStorage.setItem('profile', JSON.stringify(local_data))
-    
-    text6.innerHTML = `Succesfully added to your profile <br>Name: ${name} Mail: ${mail}`
 }
 
 document.addEventListener('DOMContentLoaded', function (){

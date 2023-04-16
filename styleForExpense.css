@@ -72,5 +72,12 @@ td{
 }
 #text3{
     text-align: center;
-    color: rgb(220, 0, 0);
+    margin: auto;
+    font-size: 0.9rem;
+}
+#text{
+    text-align: center;
+    margin: auto;
+    font-size: 0.9rem;
+    color: red;
 }

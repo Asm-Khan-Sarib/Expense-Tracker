@@ -16,10 +16,9 @@ function remove() {
 }
 // Function to draw chart
 function drawChart(chartType, food_amount, bill_amount, shopping_amount, others_amount) {
-  // If chart already exists, destroy it
+  // If chart already exists, remove it
   remove()
-  //set chart size
-  size.style.width = '50%'
+  size.style.width = '35%'
   size.style.height = '50%'
   // Create new chart
   chart = new Chart(chartCanvas, {
@@ -29,7 +28,7 @@ function drawChart(chartType, food_amount, bill_amount, shopping_amount, others_
       datasets: [{
         label: 'Expence/Category Chart',
         data: [food_amount, bill_amount, shopping_amount, others_amount],
-        backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#ff0044']
+        backgroundColor: ['#ff0040', '#b45f04', '#0080ff', '#b404ae']
       }],
     },
     options: {
@@ -66,7 +65,7 @@ function chart_data(chartType) {
     text1.innerHTML = text
   }
   else {
-    text1.innerHTML = 'Please add some expences to visualise them'
+    text1.innerHTML = 'Your transection list is empty<br>You can add your expences from "Add Transection" page'
   }
 
 }
@@ -84,12 +83,13 @@ document.addEventListener('DOMContentLoaded', function () {
         chart_data('bar')
       })
       button3.addEventListener('click', function () {
-        text1.innerHTML = "Chart Removed"
+        text1.innerHTML = ""
         remove()
       })
     }
     else{
-      text1.innerHTML = '<br><br>Plase create a profile first'
+      text1.style.color = 'red'
+      text1.innerHTML = '<br><br>Plase create a profile to use all the featurs'
       button1.disabled = true
       button2.disabled = true
       button3.disabled = true
