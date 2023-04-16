@@ -6,7 +6,7 @@ function make_table(all_data) {
     let text = '<tr><td><b>Id</b></td><td><b>Amount</b></td><td><b>Date</b></td><td><b>Category</b></td><td><b>Description</b></td></tr>'
     for (let i = 0; i < all_data.length; i++) {
         text += `<tr>`
-        text += `<td class='td_id'>${i+1}</td>`
+        text += `<td>${all_data[i].id}</td>`
         text += `<td>${all_data[i].amount}</td>`
         text += `<td>${all_data[i].date}</td>`
         text += `<td>${all_data[i].category}</td>`

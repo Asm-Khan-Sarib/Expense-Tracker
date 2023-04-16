@@ -30,19 +30,20 @@ function quick_delet(x){
         text2.innerHTML = "You have no Trunsection left to delet"
     }
 }
-
-document.addEventListener('DOMContentLoaded', function (){
-    submit_button.addEventListener('click', function () {
-        text.innerHTML = "Please write a valid id in the box"
-    })
-    form.addEventListener('submit', (event) => {
-        event.preventDefault()
-        local_data = JSON.parse(localStorage.getItem('user_info'))
-        let delet_id = document.querySelector('#delet_id').value
-
-        if(delet_id > 0 && delet_id < local_data.length){
+function delet_by_id(){
+    let id_position=-1
+    let delet_id = document.querySelector('#delet_id').value
+    local_data = JSON.parse(localStorage.getItem('user_info'))
+    if (local_data != null) {
+        for (let i = 0; i < local_data.length; i++) {
+            if(delet_id == parseInt(local_data[i].id)){
+                id_position=i
+                break
+            }
+        }
+        if(id_position!=-1){
             localStorage.removeItem('user_info');
-            local_data.splice(delet_id-1,1)
+            local_data.splice(id_position,1)
             if(local_data.length>0){
                 localStorage.setItem('user_info', JSON.stringify(local_data))
             }
@@ -51,6 +52,20 @@ document.addEventListener('DOMContentLoaded', function (){
         else{
             text.innerHTML = "Transection not found <br>Please write only one transection id at a time"
         }
+    }
+    else{
+        text.innerHTML = "Empty list"
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function (){
+    submit_button.addEventListener('click', function () {
+        text.innerHTML = "Please write a valid id in the box"
+    })
+    form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        delet_by_id() 
     })
     delet.addEventListener('click', function () {
         quick_delet('all')
