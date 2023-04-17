@@ -1,4 +1,5 @@
 const text1 = document.getElementById('text1')
+const text2 = document.getElementById('text2')
 const button1 = document.getElementById('doughnut_chart')
 const button2 = document.getElementById('bar_chart')
 const button3 = document.getElementById('remove_chart')
@@ -10,16 +11,12 @@ let chart;
 function remove() {
   if (chart) {
     chart.destroy();
-    size.style.width = '0px'
-    size.style.height = '0px'
   }
 }
 // Function to draw chart
 function drawChart(chartType, food_amount, bill_amount, shopping_amount, others_amount) {
   // If chart already exists, remove it
   remove()
-  size.style.width = '35%'
-  size.style.height = '50%'
   // Create new chart
   chart = new Chart(chartCanvas, {
     type: chartType,
@@ -62,10 +59,10 @@ function chart_data(chartType) {
     }
     drawChart(chartType, food_amount, bill_amount, shopping_amount, others_amount)
     let text = `Food:${food_amount} Bill:${bill_amount} Shoping:${shopping_amount} Othres:${others_amount}`
-    text1.innerHTML = text
+    text2.innerHTML = text
   }
   else {
-    text1.innerHTML = 'Your transection list is empty<br>You can add your expences from "Add Transection" page'
+    text2.innerHTML = 'Your transection list is empty<br>You can add your expences from "Add Transection" page'
   }
 
 }
@@ -83,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         chart_data('bar')
       })
       button3.addEventListener('click', function () {
-        text1.innerHTML = ""
+        text2.innerHTML = ""
         remove()
       })
     }

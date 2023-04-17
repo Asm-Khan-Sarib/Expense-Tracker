@@ -51,7 +51,7 @@ footer {
 }
 .input_table {
     font-size: 1.2rem;
-    text-align: center;
+    
     margin: auto;
 }
 td{
@@ -67,14 +67,12 @@ td{
     background-color: rgb(138, 16, 16);
 }
 .text{
-    text-align: center;
+    
     font-size: 0.9rem;
 }
 .give_data{
+    padding-left: 0px;
     margin: auto;
-    min-height: 20vh;
-    min-width: 20vw;
-    max-width: 24vw;
 }
 .all{
     text-align: center;
@@ -83,9 +81,13 @@ td{
 .delet_button{
     background-color: rgb(100, 16, 16);
     color:#fff;
-    height: 8vh;
-    width: 8vw;
+    height: 50px;
+    width: 110px;
 }
 .delet_button:hover {
     background-color: rgb(138, 16, 16);
+}
+.delet_button{
+    text-align: center;
+    margin: auto;
 }

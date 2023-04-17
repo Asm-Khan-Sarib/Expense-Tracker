@@ -59,8 +59,8 @@ h2 {
 .btn{
     background-color: rgb(100, 16, 16);
     color:rgb(219, 219, 219);
-    height: 8vh;
-    width: 8vw;
+    height: 50px;
+    width: 110px;
     font-size: 0.9rem;
 }
 .btn:hover {

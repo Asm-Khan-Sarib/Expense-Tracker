@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styleForReport.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <header>
         <h1>Expense Tracker</h1>
@@ -21,23 +23,25 @@
             </ul>
         </nav>
     </header>
-    <div>
-        <table class="output_table">
-            <tr>
-                <td><button type="button" id="doughnut_chart" class="view_button">Doughnut Chart</button></td>
-                <td><button type="button" id="bar_chart" class="view_button">Bar Chart</button></td>
-                <td><button type="button" id="remove_chart" class="view_button">Remove Chart</button></td>
-            </tr>
-        </table>
-        
+    <div class="chart_buttons">
+        <td><button type="button" id="doughnut_chart" class="view_button">Doughnut Chart</button></td>
+        <td><button type="button" id="bar_chart" class="view_button">Bar Chart<br>.</button></td>
+        <td><button type="button" id="remove_chart" class="view_button">Remove Chart</button></td>
     </div>
+    <b>
+        <p id="text1"></p>
+    </b>
     <div id="chartContainer">
         <canvas id="chart"></canvas>
-    </div><br>
-    <b><p id="text1"></p></b>
+    </div>
+    <b>
+        <p id="text2"></p>
+    </b>
+    <br><br><br>
     <footer>
         <p>&copy; 2023 Expense Tracker. All rights reserved.</p>
     </footer>
     <script src="jsForReport.js"></script>
 </body>
+
 </html>

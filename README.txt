@@ -1,3 +1,5 @@
+**Usable for both pc and mobile phone.
+
 Features:
 ---------
 User-friendly interface: The Expense Tracker website is designed with a clean and intuitive interface for easy navigation and use.
