@@ -88,14 +88,15 @@ table {
     display: none;
     position: absolute;
     background-color: rgba(75, 75, 75, 0.85);
-    min-width: 10vw;
+    width: 110px;
     z-index: 1;
 }
 
 .dropdown-content a {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: rgb(218, 136, 13);
-    padding: 6% 8%;
+    padding-top: 6%;
+    padding-bottom: 6%;
     text-decoration: none;
     display: block;
 }
