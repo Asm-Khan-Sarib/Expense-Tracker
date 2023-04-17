@@ -5,10 +5,10 @@ const form = document.querySelector('.give_data')
 
 //get and save data
 function save_all_transaction() {
-    let amount = document.querySelector('#amount1').value || 0
-    let date = document.querySelector('#date1').value || 0
-    let category = document.querySelector('input[name="category"]:checked').value || 0
-    let description = document.querySelector('#description1').value || 0
+    let amount = document.querySelector('#amount1').value
+    let date = document.querySelector('#date1').value
+    let category = document.querySelector('input[name="category"]:checked').value
+    let description = document.querySelector('#description1').value || '-'
     let id = 1000
     let local_data = []
     if (description.length > 20) {
