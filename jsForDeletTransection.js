@@ -28,7 +28,7 @@ function quick_delet(x){
         }
     }
     else {
-        text2.innerHTML = "You have no transection left to delet"
+        text2.innerHTML = "You have no transection left to delete"
     }
 }
 function delet_by_id(){
@@ -55,7 +55,7 @@ function delet_by_id(){
         }
     }
     else{
-        text.innerHTML = "You have no transection left to delet"
+        text.innerHTML = "You have no transection left to delete"
     }
 }
 
