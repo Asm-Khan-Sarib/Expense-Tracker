@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function (){
         text7.style.color='red'
         text7.innerHTML = "Profile deleted succesfully"
         localStorage.removeItem('profile');
+        localStorage.removeItem('user_info');
         button.disabled=true
         delete_btn.disabled=true
     })

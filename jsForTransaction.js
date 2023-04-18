@@ -25,7 +25,7 @@ function sort_by_time() {
     }
     else {
         text2.innerHTML = ''
-        text3.innerHTML = 'Your transection list is empty<br>You can add your expences at "Add Expences" page'
+        text3.innerHTML = 'Your transection list is empty<br>You can add your expenses at "Add Expenses" page'
     }
 }
 // get data from local storage and sort by category
@@ -56,7 +56,7 @@ function sort_by_category() {
     }
     else {
         text2.innerHTML = ''
-        text3.innerHTML = 'Your transection list is empty<br>You can add your expences at "Add Expences" page'
+        text3.innerHTML = 'Your transection list is empty<br>You can add your expenses at "Add Expenses" page'
     }
 }
 document.addEventListener('DOMContentLoaded', function () {

@@ -62,7 +62,7 @@ function chart_data(chartType) {
     text2.innerHTML = text
   }
   else {
-    text2.innerHTML = 'Your transection list is empty<br>You can add your expences from "Add Transection" page'
+    text2.innerHTML = 'Your transection list is empty<br>You can add your expenses at "Add Expenses" page'
   }
 
 }
