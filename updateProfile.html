@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleForUpdateProfile.css">
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="transaction.html">Transactions</a></li>
+                <li><a href="report.html">Reports</a></li>
+                <li><a href="addExpense.html">Add Expences</a></li>
+                <li><a href="deletTransection.html">Delete Expences</a></li>
+                <li><a href="help.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <p id="text"></p>
+        <p class="text5">
+            <br>Please give your name and mail to update your profile<br>
+        </p>
+        <form class="give_data">
+            <table class="input_table">
+                <tr>
+                    <td><label for="name">Name: </label></td><td><input type="text" id="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">Mail: </label></td><td><input type="text" id="mail" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><br><button type="submit" id="submit" class="btn">Update</button></td>
+                </tr>
+            </table>
+        </form><br>
+        <b><p id="text6"></p></b>
+        <br><br>
+        <p class="text5">
+            <br>If you delete your profile, all of your saved information will be lost<br><br>
+            <button type="button" id="delete_btn" class="btn">Delete Profile</button><br>
+            <b><p id="text7"></p></b>
+        </p>
+    </div>
+    <script src="jsForUpdateProfile.js"></script>
+    <footer>
+        <p>&copy; 2023 Expense Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
